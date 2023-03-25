@@ -97,24 +97,6 @@ const updateWordInProgress = function(guessedLetters) {
     ifPlayerWon();
 };
 
-/*const guessesRemaining = function(guess) {
-    const upperWord = word.toUpperCase();
-    if(upperWord.includes(guess)) {
-        message.innerText = `Yes! The word has the letter ${guess}.`;
-    } else {
-        message.innerText = `Oof. The word does NOT have ${guess}.`;
-        remainingGuesses -= 1;
-    }
-
-    if (remainingGuesses === 0) {
-        message.innerHTML = `Game over. The word is <span class = "highlight">${word}</span>.`;
-        startOver();
-    } else if (remainingGuesses === 1) {
-        guessesRemainingSpan.innerText = `${remainingGuesses} guess`;
-    } else {
-        guessesRemainingSpan.innerText = `${remainingGuesses} guesses`;
-    }
-};*/
 const guessesRemaining = function(guess) {
     const upperWord = word.toUpperCase();
     if(upperWord.includes(guess)) {
