@@ -37,7 +37,6 @@ guessLetterButton.addEventListener("click", function(e) {
     e.preventDefault();
     message.innerText = "";
     const guess = letterInput.value;
-    //console.log(guess);
     const goodGuess = validateInput(guess);
 
     if (goodGuess) {
@@ -92,7 +91,6 @@ const updateWordInProgress = function(guessedLetters) {
             trueLetters.push("●");
         }
     }
-    //console.log(trueLetters);
     wordInProgress.innerText = trueLetters.join("");
     ifPlayerWon();
 };
@@ -103,7 +101,7 @@ const guessesRemaining = function(guess) {
         message.innerText = `Yes! The word has the letter ${guess}.`;
     } else {
         message.innerText = `Oof. The word does NOT have ${guess}.`;
-        if (remainingGuesses > 0) { // check if remainingGuesses is greater than zero
+        if (remainingGuesses > 0) {
             remainingGuesses -= 1;
         }
     }
